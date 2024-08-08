@@ -1,0 +1,18 @@
+1. make a folder with required name
+2. open in VS code and run npm init -y
+3. open the package.json file and replace scripts with "scripts": {
+    "start": "node index.js"
+  }, 
+
+4. install nodemon by using npm i nodemon
+5. after installation go to package.json and add "dev": "nodemon index.js" below start.
+
+6. create a new file index.js
+7. create express instance and app and app.listen on port
+8. install express (npm i express)
+9. npm run dev
+10.add required folders like config, controllers, models, routes and proceed with work
+
+11. install npm i dotenv 
+
+12. istall mongoose (npm i mongoose)
