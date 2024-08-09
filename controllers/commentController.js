@@ -2,7 +2,7 @@
 const Post = require("../models/postModel");
 const Comment = require("../models/commentModel")
 
-exports.createComment = async(req, res) =>{
+exports.createComment = async(req, res) => {
     // exports.createComment: This is exporting the createComment function so that it can be used in other files, typically in route handling. In an Express app, you might import this function and associate it with a route.
     try{
         // fetch data from req body
@@ -18,6 +18,7 @@ exports.createComment = async(req, res) =>{
 
         // save the new comment into the database
         const savedComment = await comment.save();
+        // here create method can also be used instead of save method here save is used primarily just for learning new methos
         // await: This keyword pauses the function execution until the comment.save() operation is complete, allowing the function to wait for the result of the save operation.
         // comment.save(): This is a method provided by Mongoose, and it saves the new Comment object to the MongoDB database. When you call save(), Mongoose inserts the new comment into the appropriate collection.
 
