@@ -3,7 +3,7 @@ const router = express.Router();
 // express.Router() is a function in Express.js that creates a new "mini" router or a modular, mountable route handler. Think of it like a mini version of the main Express app, designed to handle a specific group of routes.
 
 // IMPORT THE CONTROLLER
-const {likePost} = require("../controllers/LikeController")
+const {likePost, unlikePost} = require("../controllers/LikeController")
 const {createComment} = require("../controllers/CommentController");
 const {createPost, getAllPosts} = require("../controllers/PostController");
 
@@ -14,6 +14,7 @@ router.post("/comments/create", createComment);
 router.post("/posts/create", createPost);
 router.get("/posts", getAllPosts);
 router.post("/likes/like", likePost);
+router.post("/likes/unlike", unlikePost);
 
 
 // export

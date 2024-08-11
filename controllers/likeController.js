@@ -42,10 +42,16 @@ exports.unlikePost = async(req, res) =>{
         // deletedLike: This variable will hold the deleted Like document, including its _id, which is important for the next step.
         
         // update the post collection 
-        const updatedPost = await Post.findByIdAndDelete(post, {$pull: {likes: deletedLike._id}})
+        const updatedPost = await Post.findByIdAndUpdate(post, {$pull: {likes: deletedLike._id}}, {new: true});
         // post: This is the ID of the post you want to update, which you pass to findByIdAndUpdate() to locate the specific post document.
         // $pull: This is a MongoDB operator that removes elements from an array that match a specified condition.
         // { likes: deletedLike._id }: This tells MongoDB to remove the deletedLike._id from the likes array in the Post document. The likes array stores the IDs of all the likes associated with that post.
+
+        res.status(200).json({
+            post: updatedPost,
+            success: true,
+            message: "Successfull"
+        })
 
 
     }
