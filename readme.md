@@ -111,13 +111,5 @@ blog-app-backend/
 
 ---
 
-## Future Enhancements
-- **🔔 Real-time notifications** for likes and comments.
-- **🔍 Advanced search and filtering** for posts.
-- **📷 Image uploads** with Cloudinary.
 
----
-
-## License
-This project is licensed under the MIT License.
 
